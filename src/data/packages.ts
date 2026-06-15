@@ -4,6 +4,7 @@ export const prepPackages: PrepPackage[] = [
   {
     name: "Free",
     slug: "free",
+    price: "$0",
     bestFor: "Students who want to try the platform first.",
     description:
       "Start with free preparation tools before choosing a larger study package.",
@@ -16,8 +17,9 @@ export const prepPackages: PrepPackage[] = [
     cta: "Start Free",
   },
   {
-    name: "Starter",
+    name: "Starter Materials",
     slug: "starter",
+    price: "$39",
     bestFor: "Students who need organized study materials.",
     description:
       "Build a practical study routine with focused summaries and downloadable resources.",
@@ -30,8 +32,9 @@ export const prepPackages: PrepPackage[] = [
     cta: "Book Starter Materials",
   },
   {
-    name: "Premium",
+    name: "Premium Access",
     slug: "premium",
+    price: "$89",
     bestFor:
       "Students who want deeper practice and full preparation resources.",
     description:
@@ -49,6 +52,7 @@ export const prepPackages: PrepPackage[] = [
   {
     name: "Guided Support",
     slug: "guided-support",
+    price: "$199",
     bestFor: "Students who want accountability and guided help.",
     description:
       "Combine preparation resources with more direction and accountability.",
@@ -59,5 +63,22 @@ export const prepPackages: PrepPackage[] = [
       "Live or recorded lessons",
     ],
     cta: "Request Guided Support",
+  },
+  {
+    name: "Score Improvement Support",
+    slug: "score-improvement",
+    price: "$129",
+    bestFor: "Students who need structure to correct weak areas and analyze mistakes.",
+    description:
+      "Get guided reviews, diagnostic breakdowns, and personalized mistake analysis to prepare with confidence.",
+    features: [
+      "Weak-topic review",
+      "Mistake analysis",
+      "Guided practice direction",
+      "Mock exam review",
+      "WhatsApp support",
+      "Structured preparation plan",
+    ],
+    cta: "Request Score Improvement Support",
   },
 ];

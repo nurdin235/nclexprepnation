@@ -1,4 +1,4 @@
-import { BookCheck, ChartNoAxesCombined, ListChecks, Target } from "lucide-react";
+import { BookCheck, ChartNoAxesCombined, ClipboardList, ListChecks, MessageCircleMore, Target } from "lucide-react";
 
 import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
@@ -42,31 +42,43 @@ export default function ScoreImprovementSupportPage() {
           </p>
         </div>
         <InfoGrid
-          columns={4}
+          columns={3}
           items={[
             {
-              title: "Identify weak areas",
+              title: "Weak-topic review",
               description:
-                "Organize review around topics and question types that need more attention.",
+                "Organize review around topics and clinical scenarios that need the most immediate attention.",
               icon: Target,
             },
             {
-              title: "Review mistakes",
+              title: "Mistake analysis",
               description:
-                "Use rationales to understand why an answer was missed and what principle to revisit.",
+                "Use rationales to understand why an answer was missed and dissect incorrect answer choices.",
               icon: BookCheck,
             },
             {
-              title: "Practice with structure",
+              title: "Guided practice direction",
               description:
-                "Build a practical schedule for topic review, questions, and follow-up practice.",
+                "Apply test-taking frameworks and build structured guidelines for daily question practice.",
               icon: ListChecks,
             },
             {
-              title: "Track preparation",
+              title: "Mock exam review",
               description:
-                "Watch for learning patterns and improved consistency without implying an official score change.",
+                "Analyze full practice scores to assess readiness, stamina, and timing patterns.",
               icon: ChartNoAxesCombined,
+            },
+            {
+              title: "WhatsApp support",
+              description:
+                "Stay connected with our prep team for direct check-ins, reminders, and study motivation.",
+              icon: MessageCircleMore,
+            },
+            {
+              title: "Structured preparation plan",
+              description:
+                "Build a practical schedule mapping out topic study, daily questions, and review steps.",
+              icon: ClipboardList,
             },
           ]}
         />

@@ -28,19 +28,23 @@ export default function CertificatePage() {
         secondaryHref={`mailto:${siteConfig.emails.certificate}`}
         secondaryLabel="Email Certificate Support"
         title="Document your preparation program completion."
+        imageSrc="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80"
+        imageAlt="Professional Certification Document Study"
       />
 
       <Section>
-        <div className="mb-10 max-w-4xl">
+        <div className="mb-10 max-w-4xl space-y-4">
           <h2 className="text-3xl font-bold text-navy">
             A preparation completion certificate
           </h2>
-          <p className="mt-4 leading-8 text-muted">
-            NCLEX Prep Nation may issue a course/preparation completion
-            certificate to students who complete selected preparation
-            activities. This certificate is not an official NCLEX certificate
-            and does not replace exam registration, eligibility, or official
-            licensing requirements.
+          <p className="mt-4 text-sm leading-7 text-muted">
+            NCLEX Prep Nation may issue a course/preparation completion certificate to students who complete selected preparation activities on the platform.
+          </p>
+          <p className="text-sm leading-7 text-muted">
+            This certificate shows that the student participated in and completed NCLEX Prep Nation preparation activities such as study resources, practice questions, mock exams, or guided support tasks.
+          </p>
+          <p className="text-sm leading-7 text-muted font-semibold border-l-3 border-clinical bg-soft px-4 py-3">
+            This certificate is not an official NCLEX certificate. It is not issued by NCSBN, Pearson VUE, or any nursing regulatory body. It does not replace NCLEX registration, eligibility, licensing requirements, or official exam results.
           </p>
         </div>
         <InfoGrid

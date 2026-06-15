@@ -8,7 +8,8 @@ type ButtonVariant =
   | "secondary"
   | "outline"
   | "ghost"
-  | "whatsapp";
+  | "whatsapp"
+  | "gold";
 
 type ButtonProps = {
   children: ReactNode;
@@ -26,6 +27,8 @@ const variants: Record<ButtonVariant, string> = {
   ghost: "border-transparent text-navy hover:bg-soft",
   whatsapp:
     "border-[#128c7e] bg-[#128c7e] text-white hover:border-[#0d756a] hover:bg-[#0d756a]",
+  gold:
+    "bg-gold text-navy border-gold hover:bg-gold-hover hover:border-gold-hover",
 };
 
 export function Button({

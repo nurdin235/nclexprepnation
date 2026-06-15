@@ -16,7 +16,7 @@ const offers = [
   {
     title: "Certificate",
     description:
-      "Students who complete selected preparation activities may receive a course completion certificate from NCLEX Prep Nation. This certificate shows participation in the prep program and is not an official NCLEX certificate.",
+      "Students who complete selected preparation activities may receive a course/preparation completion certificate from NCLEX Prep Nation. This is not an official NCLEX certificate.",
     cta: "View Certificate Program",
     href: "/certificate",
     icon: Award,
@@ -24,7 +24,7 @@ const offers = [
   {
     title: "Score Improvement Support",
     description:
-      "Get support to identify weak areas, review mistakes, practice better, and build stronger exam readiness before test day.",
+      "Get support to identify weak areas, review mistakes, practice better, and build stronger exam readiness before test day. This does not change official exam scores.",
     cta: "Request Score Improvement Support",
     href: "/score-improvement-support",
     icon: TrendingUp,
@@ -42,8 +42,7 @@ export function MainOffers() {
           What NCLEX Prep Nation Offers
         </h2>
         <p className="mt-4 leading-7 text-muted">
-          Everything is organized to help students prepare with structure,
-          confidence, and clear next steps.
+          Clear preparation support for students who need exam materials, guided structure, and a reliable study direction.
         </p>
       </div>
 

@@ -5,12 +5,11 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { prepPackages } from "@/data/packages";
-import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 export function PackagePreview() {
   return (
-    <Section>
+    <Section className="border-t border-line">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-clinical">
@@ -25,39 +24,42 @@ export function PackagePreview() {
         </Button>
       </div>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {prepPackages.map((item) => (
           <Card
             className={cn(
               "flex h-full flex-col p-6",
-              item.featured && "border-clinical ring-1 ring-clinical",
+              item.featured && "border-clinical ring-1 ring-clinical bg-soft/20",
             )}
             key={item.slug}
           >
             <div className="flex items-center justify-between gap-3">
-              <h3 className="text-xl font-bold text-navy">{item.name}</h3>
-              {item.featured ? <Badge>Most complete</Badge> : null}
+              <h3 className="text-lg font-bold text-navy">{item.name}</h3>
+              {item.featured ? <Badge>Popular</Badge> : null}
             </div>
-            <p className="mt-3 text-sm font-semibold text-clinical">
+            <p className="mt-3 text-2xl font-extrabold text-clinical">
+              {item.price}
+            </p>
+            <p className="mt-2 text-xs font-semibold text-clinical">
               {item.bestFor}
             </p>
-            <p className="mt-3 text-sm leading-6 text-muted">
+            <p className="mt-2 text-xs leading-5 text-muted flex-1">
               {item.description}
             </p>
-            <ul className="mt-6 flex-1 space-y-3">
+            <ul className="mt-5 space-y-2.5 border-t border-line pt-4 flex-1">
               {item.features.map((feature) => (
-                <li className="flex gap-2.5 text-sm text-ink" key={feature}>
+                <li className="flex gap-2 text-xs text-ink" key={feature}>
                   <Check
                     aria-hidden
                     className="mt-0.5 shrink-0 text-success"
-                    size={17}
+                    size={14}
                   />
                   {feature}
                 </li>
               ))}
             </ul>
             <Button
-              className="mt-7 w-full"
+              className="mt-6 w-full text-xs"
               href={
                 item.slug === "free"
                   ? "/free-diagnostic"
@@ -73,15 +75,7 @@ export function PackagePreview() {
       <p className="mt-8 border-l-3 border-clinical bg-soft px-5 py-4 text-sm leading-7 text-muted">
         Payments are handled through a manual request process. After submitting
         a request, our team will contact you by WhatsApp or email with package
-        details, payment instructions, and access confirmation. Questions can
-        also be sent to{" "}
-        <a
-          className="font-semibold text-clinical hover:underline"
-          href={`mailto:${siteConfig.emails.support}`}
-        >
-          {siteConfig.emails.support}
-        </a>
-        .
+        details, payment instructions, and access confirmation.
       </p>
     </Section>
   );

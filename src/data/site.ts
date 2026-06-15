@@ -16,7 +16,7 @@ export const siteConfig = {
     admin: "admin@nclexprepnation.com",
   },
   disclaimer:
-    "NCLEX Prep Nation is an independent educational preparation platform. NCLEX\u00ae is a registered trademark of the National Council of State Boards of Nursing, Inc. NCLEX Prep Nation is not affiliated with or endorsed by NCSBN or Pearson VUE.",
+    "NCLEX\u00ae is a registered trademark of the National Council of State Boards of Nursing, Inc. NCLEX Prep Nation is an independent educational preparation platform and is not affiliated with, sponsored by, or endorsed by NCSBN, Pearson VUE, or any nursing regulatory body. All questions and resources are original educational materials created for exam preparation purposes.",
   ctaLabels: {
     diagnostic: "Start Free Diagnostic",
     materials: "View Prep Materials",

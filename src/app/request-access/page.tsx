@@ -35,37 +35,57 @@ export default function RequestAccessPage() {
           <aside className="space-y-5">
             <Card className="p-6">
               <MailCheck aria-hidden className="text-clinical" size={25} />
-              <h2 className="mt-4 font-bold text-navy">
-                What happens after submission
+              <h2 className="mt-4 font-bold text-navy text-base">
+                How the request process works
               </h2>
-              <ol className="mt-4 space-y-3 text-sm leading-6 text-muted">
-                <li>1. We review your exam type and package interest.</li>
-                <li>2. We contact you by WhatsApp, email, or both.</li>
-                <li>3. You receive package and payment instructions.</li>
-                <li>4. Access is activated after confirmation.</li>
+              <ol className="mt-4 space-y-3.5 text-xs leading-5 text-muted">
+                <li>
+                  <strong className="text-navy">1. Choose service or package:</strong> select which support fits your current prep needs.
+                </li>
+                <li>
+                  <strong className="text-navy">2. Submit your request:</strong> fill out the form with your correct details.
+                </li>
+                <li>
+                  <strong className="text-navy">3. Team outreach:</strong> our team contacts you by WhatsApp or email.
+                </li>
+                <li>
+                  <strong className="text-navy">4. Access confirmation:</strong> access is confirmed after payment discussion.
+                </li>
               </ol>
             </Card>
             <Card className="p-6">
               <MessageCircle aria-hidden className="text-teal" size={25} />
-              <h2 className="mt-4 font-bold text-navy">Personal follow-up</h2>
-              <p className="mt-3 text-sm leading-6 text-muted">
-                The request process is designed to help you choose the right
-                level of access before package confirmation. You can also email{" "}
-                <a
-                  className="font-semibold text-clinical hover:underline"
-                  href={`mailto:${siteConfig.emails.support}`}
-                >
-                  {siteConfig.emails.support}
-                </a>
-                .
+              <h2 className="mt-4 font-bold text-navy text-base">Direct Contact Details</h2>
+              <p className="mt-3 text-xs leading-5 text-muted">
+                Have questions before submitting your request? Connect with us directly:
               </p>
+              <div className="mt-4 space-y-2 text-xs">
+                <p>
+                  <span className="font-semibold text-navy">General Support:</span>{" "}
+                  <a className="text-clinical hover:underline" href={`mailto:${siteConfig.emails.support}`}>
+                    {siteConfig.emails.support}
+                  </a>
+                </p>
+                <p>
+                  <span className="font-semibold text-navy">Study Materials:</span>{" "}
+                  <a className="text-clinical hover:underline" href={`mailto:${siteConfig.emails.materials}`}>
+                    {siteConfig.emails.materials}
+                  </a>
+                </p>
+                <p>
+                  <span className="font-semibold text-navy">Certificate program:</span>{" "}
+                  <a className="text-clinical hover:underline" href={`mailto:${siteConfig.emails.certificate}`}>
+                    {siteConfig.emails.certificate}
+                  </a>
+                </p>
+              </div>
             </Card>
             <Card className="p-6">
               <ShieldCheck aria-hidden className="text-success" size={25} />
-              <h2 className="mt-4 font-bold text-navy">Trust note</h2>
-              <p className="mt-3 text-sm leading-6 text-muted">
+              <h2 className="mt-4 font-bold text-navy text-base">Content Integrity</h2>
+              <p className="mt-3 text-xs leading-5 text-muted">
                 NCLEX Prep Nation provides original educational preparation
-                materials and does not provide real or leaked exam questions.
+                materials. We do not provide real or leaked NCLEX exam questions.
               </p>
             </Card>
           </aside>

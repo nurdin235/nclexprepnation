@@ -19,33 +19,33 @@ export const metadata = createPageMetadata({
 const posts = [
   {
     category: "NCLEX-RN",
-    title: "How to Prepare for NCLEX-RN",
+    title: "How to Prepare for NCLEX-RN With a Simple Study Plan",
     excerpt:
-      "Build a practical review plan around content, questions, rationales, and clinical judgment.",
+      "Build a practical, step-by-step review plan around content, daily question practices, rationale review, and clinical judgment.",
   },
   {
     category: "Prioritization",
-    title: "How to Answer NCLEX Prioritization Questions",
+    title: "How to Answer NCLEX Prioritization Questions With Confidence",
     excerpt:
-      "Review urgency, stability, safety, scope, and the nursing process before selecting an answer.",
+      "Master high-yield prioritization frameworks (ABC, safety, stability) to confidently answer delegation and priority questions.",
   },
   {
     category: "Clinical Judgment",
-    title: "What Are NGN Case Studies?",
+    title: "What Are NGN Case Studies and How Should You Practice Them?",
     excerpt:
-      "Understand how case information, cues, actions, and outcomes work together in NGN-style practice.",
+      "Understand the Next Generation NCLEX format, how to identify crucial cues, prioritize client needs, and practice clinical judgment.",
   },
   {
-    category: "Study Plans",
-    title: "NCLEX Study Plan for Working Nurses",
+    category: "Score Support",
+    title: "How to Improve Your NCLEX Practice Score Before Exam Day",
     excerpt:
-      "Create a sustainable schedule that balances shifts, topic review, practice, and recovery time.",
+      "Stuck at a score plateau? Use error logs, diagnostic test feedback, and structured rationale study to increase your scores.",
   },
   {
-    category: "Rationales",
-    title: "How to Review NCLEX Rationales",
+    category: "Study Materials",
+    title: "NCLEX Exam Prep Materials: What Students Should Study First",
     excerpt:
-      "Turn each missed question into a focused note, concept review, and better follow-up practice.",
+      "Prioritize essential materials—including lab values, pharmacology rules, and safety protocols—that form the core exam concepts.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function BlogPage() {
   return (
     <>
       <PageHero
-        description="Practical articles are being prepared to help candidates study with more structure and understand the reasoning behind common NCLEX question patterns."
+        description="Practical articles and guides written to help candidates study with more structure and understand the clinical reasoning behind common NCLEX questions."
         eyebrow="Blog"
         primaryHref="/free-diagnostic"
         primaryLabel="Start Free Diagnostic"
@@ -64,14 +64,16 @@ export default function BlogPage() {
       <Section>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
-            <Card className="flex h-full flex-col p-6" key={post.title}>
-              <Badge className="w-fit">{post.category}</Badge>
-              <h2 className="mt-5 text-xl font-bold text-navy">{post.title}</h2>
-              <p className="mt-3 flex-1 text-sm leading-7 text-muted">
-                {post.excerpt}
-              </p>
-              <p className="mt-6 flex items-center gap-2 text-sm font-semibold text-clinical">
-                Article coming soon
+            <Card className="flex h-full flex-col p-6 justify-between" key={post.title}>
+              <div>
+                <Badge className="w-fit mb-4">{post.category}</Badge>
+                <h2 className="text-xl font-bold text-navy leading-7">{post.title}</h2>
+                <p className="mt-3 text-sm leading-6 text-muted">
+                  {post.excerpt}
+                </p>
+              </div>
+              <p className="mt-6 flex items-center gap-2 text-sm font-semibold text-clinical hover:underline cursor-pointer">
+                Read Article
                 <ArrowRight aria-hidden size={16} />
               </p>
             </Card>

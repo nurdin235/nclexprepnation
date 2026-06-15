@@ -22,8 +22,7 @@ export function DiagnosticCTA() {
             Start With a Free Diagnostic Test
           </h2>
           <p className="mt-4 max-w-xl leading-7 text-muted">
-            Not sure where to begin? Take a short diagnostic test to see your
-            strong areas, weak topics, and recommended next step.
+            Take a short diagnostic test to identify your strong areas, weak topics, and recommended preparation path.
           </p>
           <Button className="mt-7" href="/free-diagnostic">
             Start Free Diagnostic
@@ -32,7 +31,7 @@ export function DiagnosticCTA() {
         </div>
 
         <div className="border-t border-line bg-soft p-7 sm:p-10 lg:border-t-0 lg:border-l">
-          <p className="font-semibold text-navy">What you can expect</p>
+          <p className="font-semibold text-navy">What the test analyzes</p>
           <ul className="mt-5 space-y-4">
             {diagnosticDetails.map(({ icon: Icon, label }) => (
               <li className="flex items-center gap-3 text-sm text-ink" key={label}>

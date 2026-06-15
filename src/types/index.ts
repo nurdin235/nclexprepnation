@@ -14,6 +14,7 @@ export type PrepPackage = {
   slug: string;
   bestFor: string;
   description: string;
+  price: string;
   features: string[];
   cta: string;
   featured?: boolean;

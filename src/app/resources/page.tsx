@@ -34,6 +34,8 @@ export default function ResourcesPage() {
         secondaryHref="/practice-questions"
         secondaryLabel="Practice Questions"
         title="Focused resources for the topics that matter."
+        imageSrc="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
+        imageAlt="Student Nurse Studying Books and Guidelines"
       />
       <Section>
         <div className="mb-10 max-w-3xl">

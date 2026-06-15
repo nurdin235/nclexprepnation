@@ -1,4 +1,4 @@
-import { HelpCircle, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 import { ContactForm } from "@/components/forms/ContactForm";
 import { InfoGrid } from "@/components/layout/InfoGrid";
@@ -28,13 +28,15 @@ export default function ContactPage() {
         secondaryHref="/faq"
         secondaryLabel="Read FAQs"
         title="Talk with the NCLEX Prep Nation team."
+        imageSrc="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80"
+        imageAlt="Student Studying with Computer and Phone"
       />
       <Section>
         <InfoGrid
           items={[
-            { title: "Email support", description: siteConfig.emails.support, icon: Mail },
-            { title: "WhatsApp guidance", description: "Ask about preparation options, package requests, and access steps through WhatsApp.", icon: MessageCircle },
-            { title: "Common questions", description: "Review answers about content, package requests, access, and platform independence.", icon: HelpCircle },
+            { title: "General Support", description: siteConfig.emails.support, icon: Mail },
+            { title: "Study Materials", description: siteConfig.emails.materials, icon: Mail },
+            { title: "Certificate program", description: siteConfig.emails.certificate, icon: Mail },
           ]}
         />
 
@@ -44,31 +46,55 @@ export default function ContactPage() {
               Send a general inquiry
             </h2>
             <p className="mt-3 text-sm leading-6 text-muted">
-              This form is a public interface preview. Online delivery will be
-              connected in a later phase.
+              Use this form to send general questions. The team will follow up through your preferred contact method.
             </p>
             <div className="mt-7">
               <ContactForm />
             </div>
           </Card>
           <Card className="p-6 sm:p-8">
-            <h2 className="text-xl font-bold text-navy">Direct contact</h2>
-            <p className="mt-3 text-sm leading-7 text-muted">
-              For package and access questions, use the official support
-              address or the WhatsApp contact link.
+            <h2 className="text-xl font-bold text-navy">Direct channels</h2>
+            <p className="mt-3 text-sm leading-7 text-muted font-semibold text-clinical">
+              WhatsApp Support
             </p>
-            <div className="mt-6 grid gap-3">
-              <Button href={getWhatsAppHref()} variant="whatsapp">
+            <p className="mt-1 text-xs text-muted">
+              Connect directly via WhatsApp for quick questions or package discussion.
+            </p>
+            <div className="mt-4">
+              <Button href={getWhatsAppHref()} variant="whatsapp" className="w-full">
+                <MessageCircle size={16} />
                 Contact Us on WhatsApp
               </Button>
-              <Button
-                href={`mailto:${siteConfig.emails.support}`}
-                variant="outline"
-              >
-                {siteConfig.emails.support}
+            </div>
+            <div className="mt-8 border-t border-line pt-6 space-y-4">
+              <h3 className="font-bold text-navy text-sm">Targeted Email Inquiries</h3>
+              <div className="space-y-3 text-xs leading-5">
+                <p>
+                  <span className="font-semibold text-navy">General questions:</span>{" "}
+                  <a className="text-clinical hover:underline" href={`mailto:${siteConfig.emails.support}`}>
+                    {siteConfig.emails.support}
+                  </a>
+                </p>
+                <p>
+                  <span className="font-semibold text-navy">Study materials:</span>{" "}
+                  <a className="text-clinical hover:underline" href={`mailto:${siteConfig.emails.materials}`}>
+                    {siteConfig.emails.materials}
+                  </a>
+                </p>
+                <p>
+                  <span className="font-semibold text-navy">Certificate program:</span>{" "}
+                  <a className="text-clinical hover:underline" href={`mailto:${siteConfig.emails.certificate}`}>
+                    {siteConfig.emails.certificate}
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 border-t border-line pt-4 flex flex-col gap-2">
+              <Button href="/faq" variant="ghost" className="text-xs justify-start px-2">
+                Read FAQs
               </Button>
-              <Button href="/faq" variant="ghost">
-                Read Frequently Asked Questions
+              <Button href="/request-access" variant="ghost" className="text-xs justify-start px-2">
+                Request Access
               </Button>
             </div>
           </Card>

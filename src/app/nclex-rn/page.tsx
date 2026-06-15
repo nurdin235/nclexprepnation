@@ -26,6 +26,8 @@ export default function NclexRnPage() {
         secondaryHref="/request-access"
         secondaryLabel="Request RN Materials"
         title="Build a stronger NCLEX-RN preparation routine."
+        imageSrc="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80"
+        imageAlt="Registered Nursing Clinical Study"
       />
       <Section>
         <div className="mb-10 max-w-3xl">

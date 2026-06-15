@@ -27,6 +27,8 @@ export default function FreeDiagnosticPage() {
         secondaryHref="/request-access"
         secondaryLabel="Request Access"
         title="Start With a Free Diagnostic Test"
+        imageSrc="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=800&q=80"
+        imageAlt="Clinical Diagnostic Evaluation"
       />
 
       <Section id="diagnostic-preview">
