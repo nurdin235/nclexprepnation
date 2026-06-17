@@ -60,6 +60,7 @@ export default function BlogPage() {
         secondaryHref="/resources"
         secondaryLabel="Browse Resources"
         title="NCLEX preparation guidance you can apply."
+        imageSrc="/images/nursing_student_hero.png"
       />
       <Section>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

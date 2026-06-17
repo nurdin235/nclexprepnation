@@ -24,7 +24,7 @@ const navigationData: NavItem[] = [
   { label: "NCLEX-RN", href: "/nclex-rn" },
   { label: "NCLEX-PN", href: "/nclex-pn" },
   { label: "Practice Questions", href: "/practice-questions" },
-  { label: "Certificate", href: "/certificate" },
+  { label: "Certificate", href: "/contact" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },
 ];
@@ -38,20 +38,6 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-line bg-white shadow-xs">
-      {/* 1. Top Gray Utility Bar */}
-      <div className="bg-[#f8f9fa] border-b border-line py-2.5 text-xs text-muted">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-end">
-          <div className="flex items-center shrink-0">
-            <Link
-              href="/student"
-              className="flex items-center gap-1.5 font-bold text-navy hover:text-clinical transition-colors"
-            >
-              <User size={14} className="text-navy" />
-              <span>Member Sign In</span>
-            </Link>
-          </div>
-        </div>
-      </div>
 
       {/* 2. Main Navigation Header */}
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -145,15 +131,6 @@ export function Header() {
               </Button>
             </div>
             
-            <Link
-              href="/student"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex min-h-10 w-full items-center justify-center gap-2 rounded-md bg-navy text-xs font-bold text-white hover:bg-slate-900 transition-colors"
-            >
-              <Lock size={12} className="text-teal" />
-              <span>Sign In to Student Portal</span>
-            </Link>
-
             <a
               href={whatsappHref}
               target="_blank"

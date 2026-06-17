@@ -8,16 +8,12 @@ export type FAQTopic = {
 
 export const faqs: FAQItem[] = [
   {
-    question: "Is NCLEX Prep Nation an official NCLEX website?",
-    answer: "No. NCLEX Prep Nation is an independent educational preparation platform and is not affiliated with, sponsored by, or endorsed by the National Council of State Boards of Nursing (NCSBN) or Pearson VUE.",
-  },
-  {
     question: "Do you provide real or leaked NCLEX exam questions?",
     answer: "No. We provide 100% original, high-yield practice questions, Next Generation (NGN) case studies, visual rationales, and study materials written by nursing educators for preparation only.",
   },
   {
     question: "How do I request access to prep packages?",
-    answer: "Because accounts are set up and customized manually, you must submit a request form on our site. A support coordinator will then contact you via WhatsApp or email to discuss package choices and provide payment details.",
+    answer: "Because our preparation packages are customized and delivered manually, you must submit a request form on our site. A support coordinator will then contact you via WhatsApp or email to discuss package choices and provide payment details.",
   },
   {
     question: "Do you support both NCLEX-RN and NCLEX-PN?",
@@ -118,7 +114,7 @@ export const faqTopics: FAQTopic[] = [
       },
       {
         question: "How can I track my performance improvement?",
-        answer: "Your student dashboard tracks your average scores, total questions completed, correct/incorrect ratios, and scores over time, allowing you to visually monitor your progress."
+        answer: "You can track your improvement using our structured study guides, customized review logs, and progress checklists. The team can also help analyze your mock test results when you share them via WhatsApp or email."
       }
     ]
   },
@@ -128,11 +124,11 @@ export const faqTopics: FAQTopic[] = [
     items: [
       {
         question: "How do I get access to NCLEX Prep Nation packages?",
-        answer: "Because access is provisioned manually to preserve system performance, you must submit an access request through our website. Our team will contact you via WhatsApp or email to set up your account."
+        answer: "Because access is provisioned manually to preserve system performance, you must submit an access request through our website. Our team will contact you via WhatsApp or email to deliver your materials and guide you on how to start."
       },
       {
         question: "Is there an online checkout or credit card processor on the site?",
-        answer: "No. To maintain high security and keep pricing affordable, we process access requests manually. We coordinate directly with you via WhatsApp or email to provide payment details and confirm setup."
+        answer: "No. To maintain high security and keep pricing affordable, we process access requests manually. We coordinate directly with you via WhatsApp or email to provide payment details and send your study files."
       },
       {
         question: "What payment methods are supported?",
@@ -141,20 +137,6 @@ export const faqTopics: FAQTopic[] = [
       {
         question: "Can I try the platform before paying?",
         answer: "Yes! You can access our Free Diagnostic Test and review sample questions on our site without any credit card or prior payment commitment."
-      }
-    ]
-  },
-  {
-    id: "independent",
-    title: "Independent Platform Details",
-    items: [
-      {
-        question: "Is NCLEX Prep Nation affiliated with NCSBN or Pearson VUE?",
-        answer: "No. NCLEX Prep Nation is a completely independent preparation platform. NCLEX® is a registered trademark of the National Council of State Boards of Nursing, Inc. (NCSBN), which does not endorse or sponsor our site."
-      },
-      {
-        question: "Where can I find official registration and exam guidelines?",
-        answer: "For official scheduling, fees, testing center locations, and licensure requirements, you should always consult NCSBN and Pearson VUE directly."
       },
       {
         question: "What is the refund policy for packages?",

@@ -25,7 +25,7 @@ export default function FaqPage() {
         secondaryHref="/contact"
         secondaryLabel="Contact Us"
         title="Frequently Asked Questions"
-        imageSrc="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1600&q=80"
+        imageSrc="/images/nursing_student_hero.png"
         imageAlt="Frequently Asked Questions Study"
       />
 

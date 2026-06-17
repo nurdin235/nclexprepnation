@@ -45,7 +45,7 @@ export default function PackagesPage() {
         secondaryHref="/contact"
         secondaryLabel="Ask a Question"
         title="Preparation options for different study needs."
-        imageSrc="https://images.unsplash.com/photo-1582750433449-64c86b1fdf30?auto=format&fit=crop&w=800&q=80"
+        imageSrc="/images/nursing_student_hero.png"
         imageAlt="NCLEX Prep Packages Comparison"
       />
       <Section>

@@ -25,6 +25,7 @@ export default function RequestAccessPage() {
         primaryHref="#request-form"
         primaryLabel="Complete the Form"
         title="Request your preparation package."
+        imageSrc="/images/nursing_student_hero.png"
       />
       <Section id="request-form">
         <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">

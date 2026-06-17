@@ -16,9 +16,9 @@ const offers = [
   {
     title: "Certificate",
     description:
-      "Students who complete selected preparation activities may receive a course/preparation completion certificate from NCLEX Prep Nation. This is not an official NCLEX certificate.",
+      "Earn a preparation completion certificate from NCLEX Prep Nation after completing our designated preparatory path and mock exams.",
     cta: "View Certificate Program",
-    href: "/certificate",
+    href: "/contact",
     icon: Award,
   },
   {

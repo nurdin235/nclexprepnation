@@ -11,7 +11,6 @@ const routes = [
   "/free-diagnostic",
   "/resources",
   "/packages",
-  "/certificate",
   "/score-improvement-support",
   "/request-access",
   "/contact",

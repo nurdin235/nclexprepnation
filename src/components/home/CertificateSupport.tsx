@@ -22,7 +22,7 @@ export function CertificateSupport() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <Button href="/certificate" variant="outline">
+          <Button href="/contact" variant="outline">
             <Award aria-hidden size={18} />
             View Certificate Program
           </Button>

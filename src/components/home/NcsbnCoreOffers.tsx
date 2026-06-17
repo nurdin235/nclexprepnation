@@ -14,7 +14,7 @@ const basicCards = [
   {
     title: "Document Completion Activities",
     desc: "Completion Certificate",
-    href: "/certificate",
+    href: "/contact",
     icon: Award,
   },
   {

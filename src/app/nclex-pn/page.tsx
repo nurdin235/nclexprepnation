@@ -26,7 +26,7 @@ export default function NclexPnPage() {
         secondaryHref="/request-access"
         secondaryLabel="Request PN Materials"
         title="Prepare for NCLEX-PN with focused study direction."
-        imageSrc="https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&w=800&q=80"
+        imageSrc="/images/nursing_student_hero.png"
         imageAlt="Practical Nursing Study Session"
       />
       <Section>

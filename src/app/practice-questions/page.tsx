@@ -23,6 +23,7 @@ import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Badge";
 import { QBankWidget } from "@/components/practice/QBankWidget";
+import { PracticeSubjects } from "@/components/practice/PracticeSubjects";
 import { TestimonialCarousel } from "@/components/testimonials/TestimonialCarousel";
 import { prepPackages } from "@/data/packages";
 import { faqs } from "@/data/faqs";
@@ -42,8 +43,8 @@ const benefits = [
     color: "text-teal bg-teal/10",
   },
   {
-    title: "Performance & Tracking",
-    text: "Monitor progress by topic, analyze weak areas, check time spent per question, and review history inside your student dashboard.",
+    title: "Weak Area Diagnostics",
+    text: "Identify your target areas for score improvement, analyze preparation checklists, and clarify your daily goals.",
     icon: BarChart3,
     color: "text-purple-600 bg-purple-50",
   },
@@ -73,7 +74,7 @@ export default function PracticeQuestionsPage() {
       <section className="relative overflow-hidden bg-navy text-white text-center py-20 px-4 sm:px-6">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1250&q=80"
+            src="/images/nursing_student_hero.png"
             alt="Nursing student practicing questions"
             className="w-full h-full object-cover opacity-20"
           />
@@ -116,6 +117,9 @@ export default function PracticeQuestionsPage() {
           <QBankWidget />
         </div>
       </Section>
+
+      {/* Practice questions by Subject & System */}
+      <PracticeSubjects />
 
       {/* 3. UWorld-style Active Learning Benefits Grid */}
       <Section className="py-16 sm:py-20 border-t border-b border-line bg-white">

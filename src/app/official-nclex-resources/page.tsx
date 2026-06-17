@@ -59,6 +59,7 @@ export default function OfficialNclexResourcesPage() {
         secondaryHref="/disclaimer"
         secondaryLabel="Read Our Disclaimer"
         title="Verify important NCLEX information at the source."
+        imageSrc="/images/nursing_care_hero.png"
       />
       <Section>
         <Card className="mb-8 flex gap-4 border-clinical/20 bg-soft p-6">
@@ -68,11 +69,10 @@ export default function OfficialNclexResourcesPage() {
             size={25}
           />
           <div>
-            <h2 className="font-bold text-navy">Independent platform notice</h2>
+            <h2 className="font-bold text-navy">Official sources guide</h2>
             <p className="mt-2 text-sm leading-7 text-muted">
-              NCLEX Prep Nation is an independent preparation platform. The
-              links below lead to official organizations responsible for exam
-              information and administration.
+              The links below lead directly to the official organizations responsible for exam
+              information, scheduling, and administration.
             </p>
           </div>
         </Card>
@@ -102,7 +102,7 @@ export default function OfficialNclexResourcesPage() {
         </div>
       </Section>
       <PageCTA
-        description="Use official sources for exam administration and NCLEX Prep Nation for independent preparation materials."
+        description="Use official sources for exam administration and NCLEX Prep Nation to begin your study preparation."
         primaryHref="/resources"
         primaryLabel="View Prep Materials"
         secondaryHref="/disclaimer"

@@ -28,6 +28,7 @@ export default function ScoreImprovementSupportPage() {
         secondaryHref={getWhatsAppHref()}
         secondaryLabel="Contact Us on WhatsApp"
         title="Turn weak areas into a focused review plan."
+        imageSrc="/images/score_improvement_promo.png"
       />
 
       <Section>

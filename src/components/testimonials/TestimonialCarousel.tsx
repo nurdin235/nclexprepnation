@@ -24,12 +24,26 @@ const reviewsData: Review[] = [
     imageSrc: "/images/whatsapp_review_one.png",
   },
   {
+    id: 101,
+    type: "whatsapp_image",
+    name: "Nurse Amanda, RN",
+    status: "Passed NCLEX-RN - 85 Questions",
+    imageSrc: "/images/reviews/716590718_122103064827353800_7249373183577196934_n.jpg",
+  },
+  {
     id: 2,
     type: "text",
     quote: "The visual rationales were a lifesaver for me. Instead of just reading text, I could actually see the diagrams of Peritoneal Dialysis and DVT. It helped me pass my NCLEX-RN on the first try!",
     name: "Sarah M., RN",
     status: "Passed in 85 Questions",
     stars: 5,
+  },
+  {
+    id: 102,
+    type: "whatsapp_image",
+    name: "Nurse Beatrice, LPN",
+    status: "Passed NCLEX-PN - First Try",
+    imageSrc: "/images/reviews/717536333_122103064785353800_7352149025524236979_n.jpg",
   },
   {
     id: 3,
@@ -47,12 +61,26 @@ const reviewsData: Review[] = [
     imageSrc: "/images/whatsapp_review_two.png",
   },
   {
+    id: 103,
+    type: "whatsapp_image",
+    name: "Nurse Tiffany, RN",
+    status: "Passed NCLEX-RN with Visual Rationales",
+    imageSrc: "/images/reviews/718907161_122103060603353800_3206027246719945240_n.jpg",
+  },
+  {
     id: 5,
     type: "text",
     quote: "Great practice question bank! The SATA questions are highly realistic, and the explanation block is thorough. Highly recommend the Premium Access package.",
     name: "Amanda L., LPN",
     status: "NCLEX-PN - Passed",
     stars: 5,
+  },
+  {
+    id: 104,
+    type: "whatsapp_image",
+    name: "Nurse Elena, LPN",
+    status: "Passed NCLEX-PN - 85 Questions",
+    imageSrc: "/images/reviews/718993877_122103061719353800_1888763186096958052_n.jpg",
   },
   {
     id: 6,

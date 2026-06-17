@@ -32,6 +32,7 @@ export default function AboutPage() {
         secondaryHref="/contact"
         secondaryLabel="Contact Us"
         title="NCLEX preparation built around clarity, practice, and trust."
+        imageSrc="/images/nursing_care_hero.png"
       />
       <Section>
         <InfoGrid
@@ -57,7 +58,7 @@ export default function AboutPage() {
             {
               title: "Additional support",
               description:
-                "Selected programs may include a preparation completion certificate and support for reviewing weak areas and mistakes.",
+                "Premium access programs include a preparation completion certificate and dedicated support for reviewing weak areas and clinical mistakes.",
               icon: Award,
             },
           ]}

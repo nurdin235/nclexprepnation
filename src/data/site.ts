@@ -15,8 +15,13 @@ export const siteConfig = {
     certificate: "certificate@nclexprepnation.com",
     admin: "admin@nclexprepnation.com",
   },
+  social: {
+    tiktok: "https://www.tiktok.com/@nclexprepnation1?_r=1&_t=ZN-97E9bS93hFG",
+    instagram: "https://www.instagram.com/nationnclexprep?igsh=MTdxcmpkbjV5MGFvaQ%3D%3D&utm_source=qr",
+    facebook: "https://www.facebook.com/share/1DnLeqD4eU/?mibextid=wwXIfr",
+  },
   disclaimer:
-    "NCLEX\u00ae is a registered trademark of the National Council of State Boards of Nursing, Inc. NCLEX Prep Nation is an independent educational preparation platform and is not affiliated with, sponsored by, or endorsed by NCSBN, Pearson VUE, or any nursing regulatory body. All questions and resources are original educational materials created for exam preparation purposes.",
+    "All questions and resources are original educational materials created for exam preparation purposes.",
   ctaLabels: {
     diagnostic: "Start Free Diagnostic",
     materials: "View Prep Materials",

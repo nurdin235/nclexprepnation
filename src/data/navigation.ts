@@ -20,7 +20,7 @@ export const footerNavigation: Record<string, NavigationItem[]> = {
   ],
   services: [
     { label: "Exam Prep Materials", href: "/resources" },
-    { label: "Certificate", href: "/certificate" },
+    { label: "Certificate", href: "/contact" },
     {
       label: "Score Improvement Support",
       href: "/score-improvement-support",

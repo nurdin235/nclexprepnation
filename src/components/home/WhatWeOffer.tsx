@@ -28,9 +28,9 @@ const offers: OfferItem[] = [
     icon: Award,
     title: "Course Certificates",
     subtitle: "Official Completion & Recognition",
-    description: "Earn a verified course completion certificate once you complete our diagnostic prep path. Demonstrate your exam readiness and dedication to prospective boards, recruiters, and healthcare facilities.",
-    ctaText: "Learn About Certificate",
-    ctaHref: "/certificate",
+    description: "Request a preparation completion certificate after finishing our designated preparatory path. Contact us via WhatsApp or email to get details about completion criteria.",
+    ctaText: "Contact Us for Certificate Info",
+    ctaHref: "/contact",
   },
   {
     icon: TrendingUp,
@@ -109,6 +109,24 @@ export function WhatWeOffer() {
               </Card>
             );
           })}
+        </div>
+
+        {/* Professional callout for Core NCLEX Coverage */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl border border-line bg-soft/50 p-8 sm:p-10 text-center">
+            {/* Subtle decorative blurs */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full filter blur-2xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-clinical/10 rounded-full filter blur-2xl pointer-events-none" />
+            
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-clinical bg-clinical/10 border border-clinical/20 px-3 py-1 rounded-full mb-4">
+                Core NCLEX Coverage & Exam Realism
+              </span>
+              <p className="text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed font-semibold">
+                Our prep questions cover the core NCLEX subject areas and are designed based on current exam patterns and high-yield testing topics. They are structured to closely reflect the difficulty level and format you should expect in your exam, which helps candidates build familiarity and confidence before test day.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </Section>

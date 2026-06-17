@@ -1,7 +1,9 @@
 import { NcsbnHero } from "@/components/home/NcsbnHero";
 import { WhatWeOffer } from "@/components/home/WhatWeOffer";
 import { WhyNclexPrepNation } from "@/components/home/WhyNclexPrepNation";
+import { FreeQuestionsPromo } from "@/components/home/FreeQuestionsPromo";
 import { NcsbnPathways } from "@/components/home/NcsbnPathways";
+import { NcsbnPromoSections } from "@/components/home/NcsbnPromoSections";
 import { NcsbnNews } from "@/components/home/NcsbnNews";
 import { NcsbnPreFooter } from "@/components/home/NcsbnPreFooter";
 import { TestimonialCarousel } from "@/components/testimonials/TestimonialCarousel";
@@ -14,7 +16,9 @@ export default function Home() {
       <NcsbnHero />
       <WhatWeOffer />
       <WhyNclexPrepNation />
+      <FreeQuestionsPromo />
       <NcsbnPathways />
+      <NcsbnPromoSections />
       
       {/* Testimonials section on home page */}
       <Section className="bg-white py-16 sm:py-20 border-b border-line">

@@ -1,4 +1,4 @@
-import { BarChart3, ClipboardList, Route, ShieldCheck } from "lucide-react";
+import { BarChart3, ClipboardList, Route } from "lucide-react";
 
 import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
@@ -27,7 +27,7 @@ export default function FreeDiagnosticPage() {
         secondaryHref="/request-access"
         secondaryLabel="Request Access"
         title="Start With a Free Diagnostic Test"
-        imageSrc="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=800&q=80"
+        imageSrc="/images/nursing_student_hero.png"
         imageAlt="Clinical Diagnostic Evaluation"
       />
 
@@ -53,7 +53,7 @@ export default function FreeDiagnosticPage() {
             {
               title: "Preparation summary",
               description:
-                "See a study-focused summary of stronger areas and topics that may need closer review.",
+                "See a study-focused summary highlighting your strengths and the topics requiring closer review.",
               icon: BarChart3,
             },
             {
@@ -65,20 +65,6 @@ export default function FreeDiagnosticPage() {
           ]}
         />
 
-        <Card className="mt-8 flex gap-4 border-clinical/20 bg-soft p-6">
-          <ShieldCheck
-            aria-hidden
-            className="mt-0.5 shrink-0 text-clinical"
-            size={25}
-          />
-          <div>
-            <h2 className="font-bold text-navy">Preparation tool only</h2>
-            <p className="mt-2 text-sm leading-7 text-muted">
-              This diagnostic is not an official NCLEX score, eligibility
-              decision, or guarantee of exam performance.
-            </p>
-          </div>
-        </Card>
       </Section>
 
       <PageCTA

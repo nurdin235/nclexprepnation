@@ -462,10 +462,10 @@ export function QBankWidget() {
           <Lock className="text-clinical shrink-0 mt-0.5" size={20} />
           <div>
             <h4 className="text-sm font-bold text-navy">
-              Want more questions, detailed charts, and live dashboards?
+              Want more practice questions and clinical rationales?
             </h4>
             <p className="text-xs text-muted mt-1 max-w-xl">
-              Unlock our complete question library containing thousands of NCLEX-RN/PN exam prep simulations and detailed clinical rationes.
+              Unlock our complete question library containing thousands of NCLEX-RN/PN exam prep simulations and detailed clinical rationales.
             </p>
           </div>
         </div>

@@ -7,12 +7,12 @@ export function NcsbnHero() {
       {/* Background Image on Right */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-3/5 z-0">
         <img
-          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1250&q=80"
+          src="/images/nursing_care_hero.png"
           alt="Professional nurse caring for a patient"
           className="w-full h-full object-cover object-center"
         />
         {/* Soft overlay gradient to fade to white on the left for text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/35 to-transparent" />
       </div>
 
       {/* Mobile-only white overlay to ensure dark text is readable on tiny viewports */}

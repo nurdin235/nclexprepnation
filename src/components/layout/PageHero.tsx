@@ -21,7 +21,7 @@ export function PageHero({
   primaryHref = "/request-access",
   secondaryLabel,
   secondaryHref,
-  imageSrc = "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80",
+  imageSrc = "/images/nursing_care_hero.png",
   imageAlt = "NCLEX Preparation",
 }: PageHeroProps) {
   return (
