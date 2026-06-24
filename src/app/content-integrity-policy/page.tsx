@@ -8,6 +8,7 @@ export const metadata = createPageMetadata({
   title: "Content Integrity Policy",
   description,
   path: "/content-integrity-policy",
+  noIndex: true,
 });
 
 export default function ContentIntegrityPolicyPage() {

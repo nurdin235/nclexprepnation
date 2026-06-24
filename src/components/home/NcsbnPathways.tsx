@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, GraduationCap } from "lucide-react";
-import { Card } from "@/components/ui/Card";
 
 export function NcsbnPathways() {
   return (

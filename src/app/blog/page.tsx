@@ -2,26 +2,40 @@ import { ArrowRight } from "lucide-react";
 
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Explore practical NCLEX-RN, NCLEX-PN, NGN, prioritization, rationale review, and study planning guidance from NCLEX Prep Nation.";
+  "Explore NCLEX-RN, NCLEX-PN, NGN case study, international nurse, rationale review, and study planning guidance for U.S. and Canada exam pathways.";
 
 export const metadata = createPageMetadata({
-  title: "NCLEX Prep Blog",
+  title: "NCLEX Prep Blog for RN, PN, and International Nurses",
   description,
   path: "/blog",
+  keywords: ["NCLEX prep blog", "NCLEX study tips", "NCLEX for international nurses"],
 });
 
 const posts = [
   {
     category: "NCLEX-RN",
-    title: "How to Prepare for NCLEX-RN With a Simple Study Plan",
+    title: "How to Prepare for NCLEX-RN as a U.S. or Canada Candidate",
     excerpt:
       "Build a practical, step-by-step review plan around content, daily question practices, rationale review, and clinical judgment.",
+  },
+  {
+    category: "NCLEX Basics",
+    title: "NCLEX-RN vs NCLEX-PN: What Nursing Candidates Should Know",
+    excerpt:
+      "Compare RN and PN preparation priorities, question practice, clinical judgment expectations, and study planning needs.",
+  },
+  {
+    category: "Rationales",
+    title: "How to Use NCLEX Practice Questions With Rationales",
+    excerpt:
+      "Learn how to review correct and incorrect answer explanations so each question becomes a focused learning opportunity.",
   },
   {
     category: "Prioritization",
@@ -43,15 +57,26 @@ const posts = [
   },
   {
     category: "Study Materials",
-    title: "NCLEX Exam Prep Materials: What Students Should Study First",
+    title: "Best NCLEX Study Materials for Focused Exam Preparation",
     excerpt:
       "Prioritize essential materials—including lab values, pharmacology rules, and safety protocols—that form the core exam concepts.",
+  },
+  {
+    category: "International Nurses",
+    title: "How International Nurses Can Prepare for NCLEX",
+    excerpt:
+      "Plan your study around NCLEX-RN or NCLEX-PN expectations while confirming official registration steps through official sources.",
   },
 ];
 
 export default function BlogPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/blog"
+        title="NCLEX Prep Blog"
+      />
       <PageHero
         description="Practical articles and guides written to help candidates study with more structure and understand the clinical reasoning behind common NCLEX questions."
         eyebrow="Blog"

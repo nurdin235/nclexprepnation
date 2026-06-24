@@ -2,25 +2,32 @@ import { MailCheck, MessageCircle, ShieldCheck } from "lucide-react";
 
 import { RequestAccessForm } from "@/components/forms/RequestAccessForm";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Request NCLEX Prep Nation materials, certificate details, score improvement support, Premium access, or Guided Support.";
+  "Request NCLEX prep access for study materials, certificate details, score improvement support, Premium Access, or Guided Support for RN and PN candidates.";
 
 export const metadata = createPageMetadata({
   title: "Request NCLEX Prep Access",
   description,
   path: "/request-access",
+  keywords: ["request NCLEX prep access", "NCLEX package request", "NCLEX guided support request"],
 });
 
 export default function RequestAccessPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/request-access"
+        title="Request NCLEX Prep Access"
+      />
       <PageHero
-        description="Tell us what you are preparing for and which service interests you. The team will follow up through your preferred contact method."
+        description="Tell us what you are preparing for and which service interests you. The team will follow up through your preferred contact method with next steps."
         eyebrow="Request access"
         primaryHref="#request-form"
         primaryLabel="Complete the Form"

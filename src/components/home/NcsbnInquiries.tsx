@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, HelpCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export function NcsbnInquiries() {

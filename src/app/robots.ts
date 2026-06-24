@@ -7,7 +7,11 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: [],
+      disallow: [
+        "/official-nclex-resources",
+        "/content-integrity-policy",
+        "/disclaimer",
+      ],
     },
     sitemap: `${siteConfig.url}/sitemap.xml`,
   };

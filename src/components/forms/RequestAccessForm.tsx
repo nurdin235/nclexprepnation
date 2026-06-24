@@ -1,10 +1,14 @@
 "use client";
 
 import { CheckCircle2 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import {
+  getRequestAccessWhatsAppHref,
+  packageInterestLabels,
+} from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
@@ -24,6 +28,9 @@ const requestSchema = z.object({
 });
 
 type RequestFormValues = z.infer<typeof requestSchema>;
+type SubmittedRequest = {
+  whatsappHref: string;
+} | null;
 
 function FieldError({ message }: { message?: string }) {
   if (!message) {
@@ -34,12 +41,15 @@ function FieldError({ message }: { message?: string }) {
 }
 
 export function RequestAccessForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState<SubmittedRequest>(null);
+  const [submitError, setSubmitError] = useState("");
   const {
-    formState: { errors },
+    formState: { errors, isSubmitting },
     handleSubmit,
     register,
+    reset,
     setError,
+    setValue,
   } = useForm<RequestFormValues>({
     defaultValues: {
       examType: "",
@@ -48,7 +58,21 @@ export function RequestAccessForm() {
     },
   });
 
-  function onSubmit(values: RequestFormValues) {
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const rawPackageFromUrl =
+      searchParams.get("package") || searchParams.get("service");
+    const packageFromUrl =
+      rawPackageFromUrl === "materials"
+        ? "exam-prep-materials"
+        : rawPackageFromUrl;
+
+    if (packageFromUrl && packageFromUrl in packageInterestLabels) {
+      setValue("packageInterest", packageFromUrl);
+    }
+  }, [setValue]);
+
+  async function onSubmit(values: RequestFormValues) {
     const result = requestSchema.safeParse(values);
 
     if (!result.success) {
@@ -65,7 +89,42 @@ export function RequestAccessForm() {
       return;
     }
 
-    setSubmitted(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type: "request-access",
+          ...result.data,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.message || "Unable to send your request.");
+      }
+
+      const whatsappHref = getRequestAccessWhatsAppHref(result.data);
+      const shouldOpenWhatsApp =
+        result.data.preferredContact === "whatsapp" ||
+        result.data.preferredContact === "both";
+
+      if (shouldOpenWhatsApp) {
+        window.location.assign(whatsappHref);
+        return;
+      }
+
+      reset();
+      setSubmitted({ whatsappHref });
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error ? error.message : "Unable to send your request.",
+      );
+    }
   }
 
   if (submitted) {
@@ -76,15 +135,21 @@ export function RequestAccessForm() {
       >
         <CheckCircle2 aria-hidden className="text-success" size={30} />
         <h2 className="mt-4 text-xl font-bold text-navy">
-          Your request is ready for connection.
+          Your request has been sent.
         </h2>
         <p className="mt-3 text-sm leading-7 text-muted">
-          Your details passed the form checks. Online delivery will be
-          connected in a later phase, so no request has been sent yet.
+          Thank you. The team will review your details and follow up through
+          your preferred contact method.
         </p>
+        <Button className="mt-6" href={submitted.whatsappHref} variant="whatsapp">
+          Continue on WhatsApp
+        </Button>
         <Button
-          className="mt-6"
-          onClick={() => setSubmitted(false)}
+          className="mt-3"
+          onClick={() => {
+            setSubmitError("");
+            setSubmitted(null);
+          }}
           variant="outline"
         >
           Submit Another Request
@@ -204,9 +269,14 @@ export function RequestAccessForm() {
         <FieldError message={errors.preferredContact?.message} />
       </fieldset>
 
-      <Button className="w-full sm:w-fit" type="submit">
-        Send Package Request
+      <Button className="w-full sm:w-fit" disabled={isSubmitting} type="submit">
+        {isSubmitting ? "Sending..." : "Send Package Request"}
       </Button>
+      {submitError ? (
+        <p className="text-sm font-medium text-error" role="alert">
+          {submitError}
+        </p>
+      ) : null}
     </form>
   );
 }

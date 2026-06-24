@@ -3,6 +3,7 @@ import { Mail, MessageCircle } from "lucide-react";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
@@ -10,19 +11,25 @@ import { getWhatsAppHref, siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Contact NCLEX Prep Nation by support email, WhatsApp, or the inquiry form for packages, materials, access, and preparation questions.";
+  "Contact NCLEX Prep Nation by email, WhatsApp, or inquiry form for NCLEX-RN and NCLEX-PN packages, materials, access, and preparation questions.";
 
 export const metadata = createPageMetadata({
   title: "Contact NCLEX Prep Nation",
   description,
   path: "/contact",
+  keywords: ["contact NCLEX prep support", "NCLEX prep WhatsApp support"],
 });
 
 export default function ContactPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/contact"
+        title="Contact NCLEX Prep Nation"
+      />
       <PageHero
-        description="Reach out for package guidance, access questions, or help deciding which preparation path fits your current needs."
+        description="Reach out for package guidance, access questions, or help deciding which preparation path fits your NCLEX-RN or NCLEX-PN needs."
         eyebrow="Contact"
         primaryLabel="Request Access"
         secondaryHref="/faq"

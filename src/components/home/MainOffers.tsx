@@ -18,7 +18,7 @@ const offers = [
     description:
       "Earn a preparation completion certificate from NCLEX Prep Nation after completing our designated preparatory path and mock exams.",
     cta: "View Certificate Program",
-    href: "/contact",
+    href: "/certificate",
     icon: Award,
   },
   {

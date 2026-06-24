@@ -9,6 +9,7 @@ export const metadata = createPageMetadata({
   title: "Disclaimer",
   description,
   path: "/disclaimer",
+  noIndex: true,
 });
 
 export default function DisclaimerPage() {

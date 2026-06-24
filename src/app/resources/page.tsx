@@ -11,24 +11,31 @@ import {
 import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Explore NCLEX study guides, PDF materials, lab values, pharmacology, prioritization, exam-day, and NGN preparation resources.";
+  "Explore NCLEX study resources for U.S. and Canada candidates, including study guides, pharmacology, lab values, prioritization, exam-day checklists, and NGN preparation materials.";
 
 export const metadata = createPageMetadata({
-  title: "Exam Prep Materials",
+  title: "NCLEX Study Resources for U.S. and Canada Candidates",
   description,
   path: "/resources",
+  keywords: ["NCLEX study resources", "NCLEX study materials", "NCLEX prep materials"],
 });
 
 export default function ResourcesPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/resources"
+        title="NCLEX Study Resources"
+      />
       <PageHero
-        description="Use organized guides, checklists, and topic summaries to support a more consistent NCLEX-RN or NCLEX-PN study routine."
+        description="Use organized guides, checklists, and topic summaries to support a more consistent NCLEX-RN or NCLEX-PN study routine for U.S., Canadian, and international candidates."
         eyebrow="Study resources"
         primaryLabel="Request Study Materials"
         secondaryHref="/practice-questions"

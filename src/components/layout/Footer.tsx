@@ -89,11 +89,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/official-nclex-resources" className="hover:text-white hover:underline transition-all">
-                  Official Resources Guide
-                </Link>
-              </li>
-              <li>
                 <Link href="/faq" className="hover:text-white hover:underline transition-all">
                   Frequently Asked Questions
                 </Link>
@@ -151,11 +146,6 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-2.5 text-xs text-slate-300">
               <li>
-                <Link href="/disclaimer" className="hover:text-white hover:underline transition-all">
-                  Legal Disclaimer
-                </Link>
-              </li>
-              <li>
                 <Link href="/terms-of-use" className="hover:text-white hover:underline transition-all">
                   Terms of Use
                 </Link>
@@ -170,17 +160,12 @@ export function Footer() {
                   Refund Policy
                 </Link>
               </li>
-              <li>
-                <Link href="/content-integrity-policy" className="hover:text-white hover:underline transition-all">
-                  Content Integrity Policy
-                </Link>
-              </li>
             </ul>
           </div>
 
         </div>
 
-        {/* Legal Disclaimer block */}
+        {/* Footer trust note */}
         <div className="mt-12 border-t border-white/10 pt-6">
           <p className="text-[11px] leading-5 text-slate-400">
             {siteConfig.disclaimer}
@@ -235,5 +220,3 @@ export function Footer() {
     </footer>
   );
 }
-
-

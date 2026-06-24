@@ -30,9 +30,9 @@ const basicCards = [
     icon: MessageCircle,
   },
   {
-    title: "Verify Official Rules & Plans",
-    desc: "Official Resources Guide",
-    href: "/official-nclex-resources",
+    title: "Ask About Exam Prep Direction",
+    desc: "FAQ & Support",
+    href: "/faq",
     icon: Info,
   },
 ];

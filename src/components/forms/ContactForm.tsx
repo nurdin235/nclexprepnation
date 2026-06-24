@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/Textarea";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   if (submitted) {
     return (
@@ -18,15 +20,18 @@ export function ContactForm() {
       >
         <CheckCircle2 aria-hidden className="text-success" size={28} />
         <h3 className="mt-4 text-xl font-bold text-navy">
-          Your message has been prepared.
+          Your message has been sent.
         </h3>
         <p className="mt-2 text-sm leading-7 text-muted">
-          Online delivery will be connected in a later phase. For immediate
-          help, email support@nclexprepnation.com.
+          Thank you for contacting NCLEX Prep Nation. The team will review your
+          details and reply as soon as possible.
         </p>
         <Button
           className="mt-5"
-          onClick={() => setSubmitted(false)}
+          onClick={() => {
+            setSubmitError("");
+            setSubmitted(false);
+          }}
           variant="outline"
         >
           Write Another Message
@@ -38,9 +43,44 @@ export function ContactForm() {
   return (
     <form
       className="grid gap-5"
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
-        setSubmitted(true);
+        setIsSubmitting(true);
+        setSubmitError("");
+
+        const formData = new FormData(event.currentTarget);
+        const payload = {
+          type: "contact",
+          name: String(formData.get("name") || ""),
+          email: String(formData.get("email") || ""),
+          subject: String(formData.get("subject") || ""),
+          message: String(formData.get("message") || ""),
+        };
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            const data = await response.json().catch(() => null);
+            throw new Error(data?.message || "Unable to send your message.");
+          }
+
+          setSubmitted(true);
+        } catch (error) {
+          setSubmitError(
+            error instanceof Error
+              ? error.message
+              : "Unable to send your message.",
+          );
+        } finally {
+          setIsSubmitting(false);
+        }
       }}
     >
       <div className="grid gap-5 sm:grid-cols-2">
@@ -70,9 +110,14 @@ export function ContactForm() {
           required
         />
       </label>
-      <Button className="w-full sm:w-fit" type="submit">
-        Send Message
+      <Button className="w-full sm:w-fit" disabled={isSubmitting} type="submit">
+        {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
+      {submitError ? (
+        <p className="text-sm font-medium text-error" role="alert">
+          {submitError}
+        </p>
+      ) : null}
     </form>
   );
 }

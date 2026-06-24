@@ -68,14 +68,12 @@ export function PracticeSubjects() {
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl sm:text-4xl font-black text-[#2e3e4f] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[#2e3e4f] tracking-tight">
             NCLEX Practice Questions <span className="font-normal text-slate-500">by</span> Subject & System
           </h2>
-          {/* Accent Line */}
-          <div className="mx-auto mt-4 h-1.5 w-14 rounded bg-[#bf5137]" />
           
-          <p className="mt-5 text-[#556779] text-sm sm:text-base font-semibold">
-            Drill into the subjects and body systems tested most on the NCLEX; each with free practice questions, expert video breakdowns.
+          <p className="mt-4 text-slate-500 text-sm sm:text-base">
+            Drill into the subjects and body systems tested most on the NCLEX.
           </p>
         </div>
 
@@ -99,10 +97,10 @@ export function PracticeSubjects() {
                 {/* Right Side: Content Details */}
                 <div className="p-6 sm:p-7 flex flex-1 flex-col justify-between relative pr-16">
                   <div>
-                    <h3 className="text-base sm:text-lg font-black text-[#2e3e4f] group-hover:text-clinical transition-colors leading-snug mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-[#2e3e4f] group-hover:text-clinical transition-colors leading-snug mb-3">
                       {subj.title}
                     </h3>
-                    <p className="text-xs sm:text-[13px] leading-relaxed text-[#556779] font-medium">
+                    <p className="text-xs sm:text-[13px] leading-relaxed text-slate-500">
                       {subj.description}
                     </p>
                   </div>

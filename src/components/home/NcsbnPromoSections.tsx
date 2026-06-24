@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/Button";
-import { Section } from "@/components/ui/Section";
 
 export function NcsbnPromoSections() {
   return (
@@ -56,10 +55,10 @@ export function NcsbnPromoSections() {
                 Show your commitment and study completion by earning a preparation certificate from NCLEX Prep Nation after finishing core preparation modules. Earning a certificate represents hours of dedicated mock practice and rationale review.
               </p>
               <p className="mt-2 text-xs leading-5 text-muted font-semibold italic">
-                *Note: This completion certificate is not an official NCLEX certificate and does not replace official licensing board requirements.
+                *Note: This completion certificate is not an exam authority document and does not replace licensing board requirements.
               </p>
               <div className="mt-8">
-                <Button href="/contact">
+                <Button href="/certificate">
                   Contact Us for Certificate Info
                 </Button>
               </div>

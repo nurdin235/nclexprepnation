@@ -4,22 +4,29 @@ import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
 import { TrustNotice } from "@/components/layout/TrustNotice";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { getWhatsAppHref } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Get structured NCLEX score improvement support focused on weak areas, mistake review, better practice habits, and stronger preparation confidence.";
+  "Get NCLEX score improvement support focused on weak areas, mistake review, better practice habits, and stronger preparation confidence without changing official exam scores.";
 
 export const metadata = createPageMetadata({
-  title: "Score Improvement Support",
+  title: "NCLEX Score Improvement Support",
   description,
   path: "/score-improvement-support",
+  keywords: ["NCLEX score improvement support", "NCLEX weak area review", "NCLEX mistake analysis"],
 });
 
 export default function ScoreImprovementSupportPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/score-improvement-support"
+        title="NCLEX Score Improvement Support"
+      />
       <PageHero
         description="Score Improvement Support helps students review weak areas, understand mistakes, practice with better structure, and prepare with more confidence. It does not change official exam scores."
         eyebrow="Preparation support"

@@ -9,10 +9,27 @@ import { NcsbnPreFooter } from "@/components/home/NcsbnPreFooter";
 import { TestimonialCarousel } from "@/components/testimonials/TestimonialCarousel";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
+import { createPageMetadata } from "@/lib/metadata";
+
+const description =
+  "NCLEX Prep Nation helps nursing candidates prepare for NCLEX-RN and NCLEX-PN with study materials, practice questions, NGN-style case studies, diagnostic support, and guided preparation.";
+
+export const metadata = createPageMetadata({
+  title: "NCLEX-RN & NCLEX-PN Prep for U.S. and Canada",
+  description,
+  path: "/",
+  keywords: ["NCLEX preparation", "NCLEX prep for U.S. candidates", "NCLEX prep for Canadian candidates"],
+});
 
 export default function Home() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/"
+        title="NCLEX Prep Nation"
+      />
       <NcsbnHero />
       <WhatWeOffer />
       <WhyNclexPrepNation />
@@ -28,7 +45,7 @@ export default function Home() {
               What Our Candidates Say
             </h2>
             <p className="mt-4 text-[14px] sm:text-[15px] text-slate-500 max-w-2xl mx-auto leading-6">
-              Hear directly from nursing graduates who used NCLEX Prep Nation to pass their RN or PN exams. Verified screenshots from candidate chat logs.
+              Hear directly from nursing candidates who used NCLEX Prep Nation for RN and PN preparation. Verified screenshots from candidate chat logs.
             </p>
           </div>
           <TestimonialCarousel />
@@ -45,6 +62,4 @@ export default function Home() {
     </>
   );
 }
-
-
 

@@ -9,23 +9,30 @@ import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
 import { TrustNotice } from "@/components/layout/TrustNotice";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Learn about NCLEX Prep Nation's mission, original educational materials, preparation support, and independent platform standards.";
+  "Learn about NCLEX Prep Nation, an independent NCLEX preparation platform supporting RN, PN, U.S., Canadian, and international nursing candidates with original study resources.";
 
 export const metadata = createPageMetadata({
   title: "About NCLEX Prep Nation",
   description,
   path: "/about",
+  keywords: ["independent NCLEX preparation platform", "NCLEX prep support"],
 });
 
 export default function AboutPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/about"
+        title="About NCLEX Prep Nation"
+      />
       <PageHero
-        description="We are building a structured preparation platform for nursing candidates who want clearer study direction, meaningful practice, and honest support."
+        description="We are building a structured preparation platform for nursing candidates in the United States, Canada, and international licensure pathways who want clearer study direction, meaningful practice, and honest support."
         eyebrow="About us"
         primaryHref="/free-diagnostic"
         primaryLabel="Start Free Diagnostic"

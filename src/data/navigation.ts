@@ -20,7 +20,7 @@ export const footerNavigation: Record<string, NavigationItem[]> = {
   ],
   services: [
     { label: "Exam Prep Materials", href: "/resources" },
-    { label: "Certificate", href: "/contact" },
+    { label: "Certificate", href: "/certificate" },
     {
       label: "Score Improvement Support",
       href: "/score-improvement-support",
@@ -30,19 +30,10 @@ export const footerNavigation: Record<string, NavigationItem[]> = {
   support: [
     { label: "Contact", href: "/contact" },
     { label: "FAQ", href: "/faq" },
-    {
-      label: "Official NCLEX Resources",
-      href: "/official-nclex-resources",
-    },
   ],
   legal: [
-    { label: "Disclaimer", href: "/disclaimer" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Use", href: "/terms-of-use" },
     { label: "Refund Policy", href: "/refund-policy" },
-    {
-      label: "Content Integrity Policy",
-      href: "/content-integrity-policy",
-    },
   ],
 };

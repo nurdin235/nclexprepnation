@@ -1,5 +1,4 @@
 import { BookOpen, Award, TrendingUp, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -19,7 +18,7 @@ const offers: OfferItem[] = [
     icon: BookOpen,
     title: "Exam Prep Materials",
     subtitle: "High-Yield QBank & Study Guides",
-    description: "Prepare with confidence using our comprehensive question banks, detailed interactive rationales, and structured nursing study materials custom-tailored to the official NCLEX-RN & NCLEX-PN test plans.",
+    description: "Study with comprehensive question banks, detailed rationales, and structured nursing guides tailored to official exam plans.",
     ctaText: "Explore Materials",
     ctaHref: "/packages",
     badge: "Popular",
@@ -27,16 +26,16 @@ const offers: OfferItem[] = [
   {
     icon: Award,
     title: "Course Certificates",
-    subtitle: "Official Completion & Recognition",
-    description: "Request a preparation completion certificate after finishing our designated preparatory path. Contact us via WhatsApp or email to get details about completion criteria.",
+    subtitle: "Preparation Completion Record",
+    description: "Request a preparation completion certificate after finishing our designated study path. Contact us via WhatsApp or email for details.",
     ctaText: "Contact Us for Certificate Info",
-    ctaHref: "/contact",
+    ctaHref: "/certificate",
   },
   {
     icon: TrendingUp,
     title: "Scores Upgrading",
     subtitle: "Personalized Diagnostic Analytics",
-    description: "Pinpoint your critical weak areas through targeted mock testing and advanced diagnostic insights. Systematically upgrade your scores and clinical judgment capabilities until you reach passing criteria.",
+    description: "Identify key focus areas through targeted baseline assessments to strengthen your clinical judgment before test day.",
     ctaText: "Start Diagnostic Test",
     ctaHref: "/free-diagnostic",
   },
@@ -51,14 +50,14 @@ export function WhatWeOffer() {
 
       <div className="relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-[11px] font-black uppercase tracking-widest text-clinical bg-clinical/10 border border-clinical/20 px-3 py-1 rounded-full mb-4">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-clinical bg-clinical/5 border border-clinical/15 px-3 py-1 rounded-full mb-4">
             Our Core Value
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-navy tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-navy tracking-tight">
             What We Offer
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium max-w-2xl mx-auto">
-            Comprehensive tools, official completion recognition, and targeted diagnostics engineered to guide you step-by-step toward NCLEX success.
+          <p className="mt-3 text-sm sm:text-base text-slate-500 max-w-2xl mx-auto">
+           We have got the questions covering the core NCLEX subject areas and are designed based on current exam patterns and high-yield testing topics. They are structured to closely reflect the difficulty level and format you should expect in your exam, which helps candidates become familiar and confident before test day.
           </p>
         </div>
 
@@ -85,13 +84,13 @@ export function WhatWeOffer() {
                     <Icon size={26} className="stroke-[2.2]" />
                   </div>
 
-                  <p className="text-xs font-extrabold text-teal uppercase tracking-widest mb-2">
+                  <p className="text-[11px] font-bold text-teal uppercase tracking-wider mb-2">
                     {offer.subtitle}
                   </p>
-                  <h3 className="text-xl sm:text-2xl font-black text-navy tracking-tight mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-navy tracking-tight mb-4">
                     {offer.title}
                   </h3>
-                  <p className="text-slate-600 text-sm leading-6 mb-8 font-medium">
+                  <p className="text-slate-500 text-sm leading-6 mb-8">
                     {offer.description}
                   </p>
                 </div>
@@ -119,10 +118,10 @@ export function WhatWeOffer() {
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-clinical/10 rounded-full filter blur-2xl pointer-events-none" />
             
             <div className="relative z-10 max-w-3xl mx-auto">
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-clinical bg-clinical/10 border border-clinical/20 px-3 py-1 rounded-full mb-4">
+              <h3 className="text-lg font-bold text-navy mb-3">
                 Core NCLEX Coverage & Exam Realism
-              </span>
-              <p className="text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed font-semibold">
+              </h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 Our prep questions cover the core NCLEX subject areas and are designed based on current exam patterns and high-yield testing topics. They are structured to closely reflect the difficulty level and format you should expect in your exam, which helps candidates build familiarity and confidence before test day.
               </p>
             </div>

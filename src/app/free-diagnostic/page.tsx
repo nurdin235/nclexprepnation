@@ -3,22 +3,28 @@ import { BarChart3, ClipboardList, Route } from "lucide-react";
 import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
-import { Card } from "@/components/ui/Card";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Start with a free NCLEX diagnostic preview to identify strong areas, weak topics, and a practical next step for NCLEX-RN or NCLEX-PN preparation.";
+  "Start a free NCLEX diagnostic preview to identify strong areas, weak topics, and practical next steps for NCLEX-RN or NCLEX-PN preparation.";
 
 export const metadata = createPageMetadata({
   title: "Free NCLEX Diagnostic Test",
   description,
   path: "/free-diagnostic",
+  keywords: ["free NCLEX diagnostic test", "NCLEX readiness check", "NCLEX weak areas"],
 });
 
 export default function FreeDiagnosticPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/free-diagnostic"
+        title="Free NCLEX Diagnostic Test"
+      />
       <PageHero
         description="Not sure where to begin? Use a short preparation-focused diagnostic to identify strong areas, weak topics, and a recommended next step."
         eyebrow="Free diagnostic"

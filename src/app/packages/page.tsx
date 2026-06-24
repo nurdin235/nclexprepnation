@@ -2,6 +2,7 @@ import { Check, HelpCircle } from "lucide-react";
 
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -12,12 +13,13 @@ import { createPageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
 const description =
-  "Compare Free, Starter Materials, Premium Access, Guided Support, and Score Improvement Support NCLEX preparation packages.";
+  "Compare NCLEX prep packages for study materials, practice questions, NGN case studies, diagnostic review, and guided support for U.S. and Canada candidates.";
 
 export const metadata = createPageMetadata({
-  title: "NCLEX Prep Packages",
+  title: "NCLEX Exam Prep Materials",
   description,
   path: "/packages",
+  keywords: ["NCLEX prep packages", "NCLEX exam prep materials", "NCLEX guided support"],
 });
 
 const packageFaqs = [
@@ -38,8 +40,13 @@ const packageFaqs = [
 export default function PackagesPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/packages"
+        title="NCLEX Exam Prep Materials"
+      />
       <PageHero
-        description="Compare preparation options, check pricing, and select the level of structure and study support that fits your current needs."
+        description="Compare preparation options and select the level of structure and study support that fits your current NCLEX-RN or NCLEX-PN needs."
         eyebrow="Packages"
         primaryLabel="Send Package Request"
         secondaryHref="/contact"

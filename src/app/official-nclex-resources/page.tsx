@@ -7,19 +7,20 @@ import { Section } from "@/components/ui/Section";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Find official NCLEX, NCSBN, and Pearson VUE sources for test plans, registration, scheduling, eligibility, and exam-day rules.";
+  "Find source links for NCLEX test plans, registration, scheduling, eligibility, and exam-day rules from the organizations that administer or publish exam information.";
 
 export const metadata = createPageMetadata({
-  title: "Official NCLEX Resources",
+  title: "NCLEX Resource Links",
   description,
   path: "/official-nclex-resources",
+  noIndex: true,
 });
 
 const officialResources = [
   {
-    title: "Official NCLEX Website",
+    title: "NCLEX Candidate Information",
     description:
-      "Review official exam information, registration guidance, exam-day information, results guidance, and FAQs.",
+      "Review exam information, registration guidance, exam-day information, results guidance, and FAQs from the source.",
     href: "https://www.nclex.com/",
   },
   {
@@ -56,8 +57,8 @@ export default function OfficialNclexResourcesPage() {
         eyebrow="Official resources"
         primaryHref="/practice-questions"
         primaryLabel="Explore Preparation Tools"
-        secondaryHref="/disclaimer"
-        secondaryLabel="Read Our Disclaimer"
+        secondaryHref="/faq"
+        secondaryLabel="Read FAQ"
         title="Verify important NCLEX information at the source."
         imageSrc="/images/nursing_care_hero.png"
       />
@@ -71,7 +72,7 @@ export default function OfficialNclexResourcesPage() {
           <div>
             <h2 className="font-bold text-navy">Official sources guide</h2>
             <p className="mt-2 text-sm leading-7 text-muted">
-              The links below lead directly to the official organizations responsible for exam
+              The links below lead directly to the organizations responsible for exam
               information, scheduling, and administration.
             </p>
           </div>
@@ -102,11 +103,11 @@ export default function OfficialNclexResourcesPage() {
         </div>
       </Section>
       <PageCTA
-        description="Use official sources for exam administration and NCLEX Prep Nation to begin your study preparation."
+        description="Use source links for exam administration details and NCLEX Prep Nation to begin your study preparation."
         primaryHref="/resources"
         primaryLabel="View Prep Materials"
-        secondaryHref="/disclaimer"
-        secondaryLabel="Read Disclaimer"
+        secondaryHref="/faq"
+        secondaryLabel="Read FAQ"
         title="Separate official requirements from study support."
       />
     </>

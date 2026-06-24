@@ -1,23 +1,33 @@
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
 import { TrustNotice } from "@/components/layout/TrustNotice";
+import { FAQPageJsonLd, WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { faqTopics } from "@/data/faqs";
 import { createPageMetadata } from "@/lib/metadata";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 
 const description =
-  "Find answers to frequently asked questions about preparing with NCLEX Prep Nation, custom study plans, visual rationales, original questions, and access requests.";
+  "Find answers about NCLEX Prep Nation study materials, RN and PN practice questions, NGN case studies, certificates, access requests, and U.S. or Canada preparation support.";
 
 export const metadata = createPageMetadata({
-  title: "NCLEX Prep FAQ",
+  title: "NCLEX Prep Frequently Asked Questions",
   description,
   path: "/faq",
+  keywords: ["NCLEX prep FAQ", "NCLEX questions and answers", "NCLEX prep support"],
 });
 
 export default function FaqPage() {
+  const faqItems = faqTopics.flatMap((topic) => topic.items);
+
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/faq"
+        title="NCLEX Prep FAQ"
+      />
+      <FAQPageJsonLd items={faqItems} />
       <PageHero
         description="Get answers to common questions about our question bank features, NGN case studies, completion certificates, and payment discussion."
         eyebrow="FAQ"

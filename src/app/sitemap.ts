@@ -11,18 +11,16 @@ const routes = [
   "/free-diagnostic",
   "/resources",
   "/packages",
+  "/certificate",
   "/score-improvement-support",
   "/request-access",
   "/contact",
   "/blog",
   "/faq",
   "/testimonials",
-  "/official-nclex-resources",
-  "/disclaimer",
   "/privacy-policy",
   "/terms-of-use",
   "/refund-policy",
-  "/content-integrity-policy",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

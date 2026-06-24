@@ -40,7 +40,7 @@ export function PageHero({
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
         <div className="max-w-2xl text-left">
           <Badge className="bg-clinical/10 text-clinical border-clinical/20">{eyebrow}</Badge>
-          <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-navy leading-tight">
+          <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-navy leading-tight">
             {title}
           </h1>
           <p className="mt-4 text-sm sm:text-base lg:text-lg leading-7 text-slate-700 font-medium max-w-xl">

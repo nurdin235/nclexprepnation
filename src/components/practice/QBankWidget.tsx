@@ -253,11 +253,6 @@ export function QBankWidget() {
     }
   };
 
-  const isOptionCorrectlySelected = (option: Option) => {
-    const isChecked = selectedOptions.includes(option.id);
-    return isChecked === option.isCorrect;
-  };
-
   const isQuestionCorrect = () => {
     // For single choice
     if (currentQuestion.type === "single") {

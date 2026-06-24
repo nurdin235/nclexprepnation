@@ -3,23 +3,30 @@ import { Activity, Baby, HeartPulse, MessageCircleMore, ShieldCheck, Tablets } f
 import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Prepare for NCLEX-PN with practical nursing study plans, original practice questions, topic resources, and a clear package request process.";
+  "Access NCLEX-PN preparation resources, practice questions, study guides, and structured support for practical nursing candidates preparing for U.S. and Canada pathways.";
 
 export const metadata = createPageMetadata({
-  title: "NCLEX-PN Prep",
+  title: "NCLEX-PN Prep Resources",
   description,
   path: "/nclex-pn",
+  keywords: ["NCLEX-PN prep", "NCLEX-PN practice questions", "practical nursing exam prep"],
 });
 
 export default function NclexPnPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/nclex-pn"
+        title="NCLEX-PN Prep Resources"
+      />
       <PageHero
-        description="Develop practical nursing knowledge and safer decision-making through organized topic review, original practice, and clear rationales."
+        description="Develop practical nursing knowledge and safer decision-making through organized topic review, original practice, and clear rationales for U.S., Canadian, and international PN candidates."
         eyebrow="NCLEX-PN"
         primaryHref="/free-diagnostic"
         primaryLabel="Start PN Diagnostic"

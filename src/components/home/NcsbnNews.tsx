@@ -8,21 +8,21 @@ const newsItems = [
   {
     title: "How to Prepare for NCLEX-RN With a Simple Study Plan",
     desc: "Build a practical, step-by-step review plan around content, daily question practices, rationale review, and clinical judgment.",
-    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog_rn_plan.png",
     category: "Study Plan",
     date: "06/12/2026",
   },
   {
     title: "How to Answer NCLEX Prioritization Questions With Confidence",
     desc: "Master high-yield prioritization frameworks (ABC, safety, stability) to confidently answer delegation and priority questions.",
-    image: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog_prioritization.png",
     category: "Prioritization",
     date: "06/10/2026",
   },
   {
     title: "What Are NGN Case Studies and How Should You Practice Them?",
     desc: "Understand the Next Generation NCLEX format, how to identify crucial cues, prioritize client needs, and practice clinical judgment.",
-    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog_ngn.png",
     category: "NGN Case Studies",
     date: "06/08/2026",
   },
@@ -38,7 +38,7 @@ export function NcsbnNews() {
               Latest Prep Articles
             </h2>
             <p className="mt-2 text-sm leading-6 text-muted max-w-2xl">
-              News and updates about the groundbreaking efforts NCLEX Prep Nation and its contributors are undertaking to support nursing candidates.
+              Guides, articles, and exam preparation updates from the NCLEX Prep Nation team.
             </p>
           </div>
           <Button href="/blog" variant="outline" className="text-xs">

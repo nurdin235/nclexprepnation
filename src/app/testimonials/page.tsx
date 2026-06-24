@@ -1,24 +1,36 @@
-import { ShieldCheck, MessageSquare } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { createPageMetadata } from "@/lib/metadata";
 import { TestimonialCarousel } from "@/components/testimonials/TestimonialCarousel";
 import { VerifiedProofGallery } from "@/components/testimonials/VerifiedProofGallery";
 
 const description =
-  "Read authentic, verified student reviews and WhatsApp chat screenshots from candidates who passed their NCLEX-RN and NCLEX-PN exams using NCLEX Prep Nation.";
+  "Read candidate reviews, study feedback, and WhatsApp screenshot testimonials about NCLEX Prep Nation materials for NCLEX-RN and NCLEX-PN preparation.";
 
 export const metadata = createPageMetadata({
-  title: "Student Testimonials",
+  title: "Reviews and Success Stories",
   description,
   path: "/testimonials",
+  keywords: [
+    "NCLEX Prep Nation reviews",
+    "NCLEX prep testimonials",
+    "NCLEX-RN preparation reviews",
+    "NCLEX-PN preparation feedback",
+  ],
 });
 
 export default function TestimonialsPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/testimonials"
+        title="Reviews and Success Stories | NCLEX Prep Nation"
+      />
       <PageHero
         description="Review real feedback, study progress logs, and WhatsApp chat screenshot reviews from candidates who prepared with NCLEX Prep Nation."
         eyebrow="Testimonials"
@@ -35,10 +47,10 @@ export default function TestimonialsPage() {
           <div className="flex flex-col md:flex-row items-center justify-between border-b border-line pb-6 mb-10 gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl font-black text-navy tracking-tight">
-                Verified Candidate Success Stories
+                Verified Candidate Reviews and Success Stories
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                Over 20+ active nursing candidate reviews, including direct WhatsApp chat screenshots.
+                Candidate feedback includes study material reviews, support notes, and direct WhatsApp chat screenshots.
               </p>
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-xs font-bold text-emerald-800 shrink-0">
@@ -59,10 +71,10 @@ export default function TestimonialsPage() {
               Direct Proof
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-navy tracking-tight">
-              WhatsApp Chat Proof & Pass Logs
+              WhatsApp Review Proof & Study Feedback
             </h2>
             <p className="text-sm text-slate-500 mt-2">
-              Browse the actual text message screenshots sent by candidates after seeing their passing status. Real conversations, real results. Click on any chat image to zoom in and read.
+              Browse text message screenshots and candidate comments about organized study materials, review support, and preparation progress. Click on any chat image to zoom in and read.
             </p>
           </div>
 

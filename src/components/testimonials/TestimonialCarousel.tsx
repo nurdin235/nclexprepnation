@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useCallback, useState, useEffect, useRef } from "react";
 import { Star, ChevronLeft, ChevronRight, MessageSquare, ZoomIn, X, CheckCircle2 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
 
 type Review = {
   id: number;
@@ -22,6 +21,27 @@ const reviewsData: Review[] = [
     name: "Nurse Jessica, RN",
     status: "Passed in 85 Questions - WhatsApp verified",
     imageSrc: "/images/whatsapp_review_one.png",
+  },
+  {
+    id: 201,
+    type: "whatsapp_image",
+    name: "Anonymous Candidate",
+    status: "Materials Received - WhatsApp feedback",
+    imageSrc: "/images/reviews/review_materials_received.jpeg",
+  },
+  {
+    id: 202,
+    type: "whatsapp_image",
+    name: "Anonymous Participant",
+    status: "Updated Materials Review",
+    imageSrc: "/images/reviews/review_comment_materials_effective.jpeg",
+  },
+  {
+    id: 203,
+    type: "whatsapp_image",
+    name: "Yasmine Claire",
+    status: "Organized Materials Feedback",
+    imageSrc: "/images/reviews/review_comment_organized_materials.jpeg",
   },
   {
     id: 101,
@@ -70,7 +90,7 @@ const reviewsData: Review[] = [
   {
     id: 5,
     type: "text",
-    quote: "Great practice question bank! The SATA questions are highly realistic, and the explanation block is thorough. Highly recommend the Premium Access package.",
+    quote: "Great practice question bank! The SATA questions helped me review carefully, and the explanation block is thorough. Highly recommend the Premium Access package.",
     name: "Amanda L., LPN",
     status: "NCLEX-PN - Passed",
     stars: 5,
@@ -109,7 +129,7 @@ const reviewsData: Review[] = [
   {
     id: 9,
     type: "text",
-    quote: "Thanks to the PN packages, I focused on safety, comfort, and coordinated care. The question bank interfaces match the real test environment perfectly.",
+    quote: "Thanks to the PN packages, I focused on safety, comfort, and coordinated care. The question bank interface made timed practice easier to manage.",
     name: "Carlos M., LPN",
     status: "Passed in 85 Questions",
     stars: 5,
@@ -141,7 +161,7 @@ const reviewsData: Review[] = [
   {
     id: 13,
     type: "text",
-    quote: "Passed my exam last week! The cardiac tamponade and pericarditis priority rationales saved me. I had a very similar question on my actual exam!",
+    quote: "The cardiac tamponade and pericarditis priority rationales helped me think through similar priority concepts with more confidence.",
     name: "Emily W., RN",
     status: "Passed on 1st Attempt",
     stars: 5,
@@ -236,23 +256,23 @@ export function TestimonialCarousel() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const totalSlides = isMobile ? reviewsData.length : Math.ceil(reviewsData.length / 3);
+
+  const nextSlide = useCallback(() => {
+    setActiveIdx((prev) => (prev + 1) % totalSlides);
+  }, [totalSlides]);
+
+  const prevSlide = () => {
+    setActiveIdx((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
   // Auto scroll effect from left to right
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 6000);
     return () => clearInterval(interval);
-  }, [activeIdx, isMobile]);
-
-  const totalSlides = isMobile ? reviewsData.length : Math.ceil(reviewsData.length / 3);
-
-  const nextSlide = () => {
-    setActiveIdx((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setActiveIdx((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+  }, [nextSlide]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -373,7 +393,7 @@ export function TestimonialCarousel() {
             <div className="p-4 bg-[#ece5dd] overflow-y-auto flex justify-center items-center flex-1">
               <img
                 src={selectedImage}
-                alt="WhatsApp Screenshot Zoom"
+                alt="Expanded WhatsApp candidate review screenshot"
                 className="max-h-[70vh] object-contain rounded border border-slate-300 shadow-sm"
               />
             </div>

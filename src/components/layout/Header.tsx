@@ -1,18 +1,11 @@
 "use client";
 
-import {
-  Lock,
-  Menu,
-  MessageCircle,
-  X,
-  User,
-  Search,
-} from "lucide-react";
+import { Menu, MessageCircle, Search, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { getWhatsAppHref, siteConfig } from "@/data/site";
+import { getWhatsAppHref } from "@/data/site";
 
 type NavItem = {
   label: string;
@@ -24,7 +17,7 @@ const navigationData: NavItem[] = [
   { label: "NCLEX-RN", href: "/nclex-rn" },
   { label: "NCLEX-PN", href: "/nclex-pn" },
   { label: "Practice Questions", href: "/practice-questions" },
-  { label: "Certificate", href: "/contact" },
+  { label: "Certificate", href: "/certificate" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },
 ];
@@ -147,5 +140,4 @@ export function Header() {
     </header>
   );
 }
-
 

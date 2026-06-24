@@ -3,23 +3,30 @@ import { Brain, ClipboardCheck, Pill, ShieldPlus, Stethoscope, Users } from "luc
 import { InfoGrid } from "@/components/layout/InfoGrid";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
-  "Prepare for NCLEX-RN with topic-based practice questions, study resources, NGN-style case studies, a diagnostic preview, and structured support.";
+  "Prepare for NCLEX-RN with structured study materials, practice questions, rationales, mock exams, and support for candidates pursuing U.S. or Canadian nursing licensure pathways.";
 
 export const metadata = createPageMetadata({
-  title: "NCLEX-RN Prep",
+  title: "NCLEX-RN Prep for U.S. and Canada Candidates",
   description,
   path: "/nclex-rn",
+  keywords: ["NCLEX-RN prep", "NCLEX-RN practice questions", "NCLEX-RN study plan"],
 });
 
 export default function NclexRnPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/nclex-rn"
+        title="NCLEX-RN Prep"
+      />
       <PageHero
-        description="Prepare across key registered nursing topics with original practice, clinical judgment review, and resources designed to make your next study action clearer."
+        description="Prepare across key registered nursing topics with original practice, clinical judgment review, and resources for U.S., Canadian, and international RN candidates."
         eyebrow="NCLEX-RN"
         primaryHref="/free-diagnostic"
         primaryLabel="Start RN Diagnostic"

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ZoomIn, X, CheckCircle2, MessageSquare, Filter, ShieldCheck } from "lucide-react";
+import { ZoomIn, X, CheckCircle2, Filter, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
 type ProofImage = {
@@ -126,6 +126,30 @@ const proofImages: ProofImage[] = [
     status: "Passed NCLEX-RN - 85 Questions",
     date: "May 2026",
   },
+  {
+    id: 15,
+    src: "/images/reviews/review_materials_received.jpeg",
+    name: "Anonymous Candidate",
+    program: "both",
+    status: "Materials Received Feedback",
+    date: "June 2026",
+  },
+  {
+    id: 16,
+    src: "/images/reviews/review_comment_materials_effective.jpeg",
+    name: "Anonymous Participant",
+    program: "both",
+    status: "Study Materials Review",
+    date: "June 2026",
+  },
+  {
+    id: 17,
+    src: "/images/reviews/review_comment_organized_materials.jpeg",
+    name: "Yasmine Claire",
+    program: "both",
+    status: "Organized Materials Feedback",
+    date: "June 2026",
+  },
 ];
 
 export function VerifiedProofGallery() {
@@ -204,7 +228,7 @@ export function VerifiedProofGallery() {
                     <span>Verified Chat</span>
                   </span>
                   <span className="text-[9px] text-teal font-extrabold uppercase tracking-wider">
-                    NCLEX-{proof.program}
+                    {proof.program === "both" ? "RN/PN" : `NCLEX-${proof.program}`}
                   </span>
                 </div>
 
@@ -215,7 +239,7 @@ export function VerifiedProofGallery() {
                 >
                   <img
                     src={proof.src}
-                    alt={`${proof.name} pass review`}
+                    alt={`${proof.name} candidate review screenshot`}
                     className="w-full h-full object-cover opacity-90 group-hover:scale-103 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-navy/10 group-hover:bg-navy/35 transition-colors flex items-center justify-center">
