@@ -51,7 +51,7 @@ export const siteConfig = {
   name: "NCLEX Prep Nation",
   url: "https://nclexprepnation.com",
   description:
-    "Independent NCLEX-RN and NCLEX-PN preparation platform with study materials, practice questions, NGN-style case studies, diagnostic support, and guided resources for U.S. and Canada candidates.",
+    "NCLEX Prep Nation is an independent NCLEX preparation platform for nursing candidates preparing for NCLEX-RN and NCLEX-PN. The platform provides study materials, practice questions, NGN-style case studies, diagnostic support, guided preparation, and exam readiness resources for candidates in the United States, Canada, and internationally.",
   whatsappNumber: configuredWhatsAppNumber || "12495146148",
   emails: {
     support: "support@nclexprepnation.com",

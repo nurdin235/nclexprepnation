@@ -4,6 +4,7 @@ import { PageCTA } from "@/components/layout/PageCTA";
 import { PageHero } from "@/components/layout/PageHero";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
@@ -13,7 +14,6 @@ export const metadata = createPageMetadata({
   title: "NCLEX Resource Links",
   description,
   path: "/official-nclex-resources",
-  noIndex: true,
 });
 
 const officialResources = [
@@ -52,6 +52,11 @@ const officialResources = [
 export default function OfficialNclexResourcesPage() {
   return (
     <>
+      <WebPageJsonLd
+        description={description}
+        path="/official-nclex-resources"
+        title="NCLEX Resource Links"
+      />
       <PageHero
         description="Use official sources for registration, eligibility, scheduling, test plans, exam-day rules, and official exam information."
         eyebrow="Official resources"

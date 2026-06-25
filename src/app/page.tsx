@@ -24,13 +24,13 @@ const TestimonialCarousel = dynamic(
 );
 
 const description =
-  "NCLEX Prep Nation helps nursing candidates prepare for NCLEX-RN and NCLEX-PN with study materials, practice questions, NGN-style case studies, diagnostic support, and guided preparation.";
+  "Official website of NCLEX Prep Nation, an independent NCLEX preparation platform offering NCLEX-RN and NCLEX-PN study materials, practice questions, NGN-style case studies, diagnostic support, and guided exam preparation.";
 
 export const metadata = createPageMetadata({
-  title: "NCLEX-RN & NCLEX-PN Prep for U.S. and Canada",
+  title: "NCLEX Prep Nation | NCLEX-RN & NCLEX-PN Prep for U.S. and Canada",
   description,
   path: "/",
-  keywords: ["NCLEX preparation", "NCLEX prep for U.S. candidates", "NCLEX prep for Canadian candidates"],
+  keywords: ["NCLEX Prep Nation", "NCLEX Prep Nation official website", "NCLEX preparation", "NCLEX prep for U.S. candidates", "NCLEX prep for Canadian candidates"],
 });
 
 export default function Home() {

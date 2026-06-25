@@ -27,24 +27,18 @@ export function OrganizationJsonLd() {
     <JsonLd
       data={{
         "@context": "https://schema.org",
-        "@type": "Organization",
-        name: siteConfig.name,
-        url: siteConfig.url,
-        description: siteConfig.description,
+        "@type": "EducationalOrganization",
+        name: "NCLEX Prep Nation",
+        url: "https://nclexprepnation.com",
+        logo: "https://nclexprepnation.com/icon-512.png",
+        description: "NCLEX Prep Nation is an independent NCLEX preparation platform offering study materials, practice questions, NGN-style case studies, diagnostic support, and guided preparation for NCLEX-RN and NCLEX-PN candidates.",
         areaServed: ["United States", "Canada", "International"],
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            contactType: "customer support",
-            email: siteConfig.emails.support,
-            availableLanguage: ["English"],
-          },
-        ],
+        email: "support@nclexprepnation.com",
         sameAs: [
           siteConfig.social.facebook,
           siteConfig.social.instagram,
           siteConfig.social.tiktok,
-        ],
+        ].filter(Boolean),
       }}
     />
   );
@@ -56,9 +50,10 @@ export function WebSiteJsonLd() {
       data={{
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: siteConfig.name,
-        url: siteConfig.url,
-        description: siteConfig.description,
+        name: "NCLEX Prep Nation",
+        alternateName: "NCLEX Prep",
+        url: "https://nclexprepnation.com",
+        description: "Independent NCLEX preparation platform for NCLEX-RN and NCLEX-PN candidates.",
         inLanguage: "en",
       }}
     />

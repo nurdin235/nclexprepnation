@@ -1,4 +1,5 @@
 import { LegalPage } from "@/components/layout/LegalPage";
+import { WebPageJsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/metadata";
 
 const description =
@@ -8,12 +9,17 @@ export const metadata = createPageMetadata({
   title: "Content Integrity Policy",
   description,
   path: "/content-integrity-policy",
-  noIndex: true,
 });
 
 export default function ContentIntegrityPolicyPage() {
   return (
-    <LegalPage
+    <>
+      <WebPageJsonLd
+        description={description}
+        path="/content-integrity-policy"
+        title="Content Integrity Policy"
+      />
+      <LegalPage
       description="Our content standards are designed to support ethical preparation, original learning materials, and responsible review."
       eyebrow="Content standards"
       sections={[
@@ -50,5 +56,6 @@ export default function ContentIntegrityPolicyPage() {
       ]}
       title="Content Integrity Policy"
     />
+    </>
   );
 }

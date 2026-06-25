@@ -63,6 +63,40 @@ export const faqs: FAQItem[] = [
 
 export const faqTopics: FAQTopic[] = [
   {
+    id: "general",
+    title: "General & Brand Info",
+    items: [
+      {
+        question: "What is NCLEX Prep Nation?",
+        answer: "NCLEX Prep Nation is the official website of NCLEX Prep Nation, an independent educational preparation platform. We help nursing candidates prepare for the NCLEX-RN and NCLEX-PN exams using original study materials, practice questions, NGN-style case studies, diagnostic support, and guided exam preparation."
+      },
+      {
+        question: "Is NCLEX Prep Nation an official NCLEX website?",
+        answer: "No. NCLEX Prep Nation is the official website of NCLEX Prep Nation, which is an independent educational preparation platform. It is not the official NCLEX website and is not affiliated with, associated with, or endorsed by the National Council of State Boards of Nursing (NCSBN) or Pearson VUE."
+      },
+      {
+        question: "Does NCLEX Prep Nation provide real NCLEX questions?",
+        answer: "No. We do not provide, request, or use real or leaked NCLEX exam questions. All our practice questions, next-generation (NGN) case studies, and rationales are 100% original educational prep materials designed by nursing educators to help candidates build clinical judgment."
+      },
+      {
+        question: "What materials are available?",
+        answer: "We offer customized study packages containing comprehensive practice questions, detailed visual rationales, NGN-style case studies, diagnostic baseline tests, structured review guides, pharmacology review guides, and preparation progress tracking."
+      },
+      {
+        question: "Who can use NCLEX Prep Nation?",
+        answer: "Our platform is designed for nursing candidates in the United States, Canada, and international candidates preparing for the NCLEX-RN or NCLEX-PN licensure exams."
+      },
+      {
+        question: "Do you support NCLEX-RN and NCLEX-PN?",
+        answer: "Yes. We offer separate, customized preparation pathways tailored to the respective NCLEX-RN and NCLEX-PN test plans to match each candidate's needs."
+      },
+      {
+        question: "How can I request access?",
+        answer: "You can request access by submitting the access request form on our website. After review, a coordinator will reach out to you via WhatsApp or email to discuss details and provide access credentials."
+      }
+    ]
+  },
+  {
     id: "preparing",
     title: "Preparing with NCLEX Prep Nation",
     items: [

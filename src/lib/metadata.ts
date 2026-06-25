@@ -20,7 +20,7 @@ export function createPageMetadata({
   title,
 }: PageMetadataOptions): Metadata {
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
-  const fullTitle = `${title} | ${siteConfig.name}`;
+  const fullTitle = title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`;
 
   return {
     title,

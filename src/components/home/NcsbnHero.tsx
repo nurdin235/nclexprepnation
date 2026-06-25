@@ -33,8 +33,8 @@ export function NcsbnHero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-navy leading-tight">
             We&apos;re there in the moments of preparation.
           </h1>
-          <p className="mt-5 text-sm sm:text-base lg:text-lg leading-7 text-slate-600 max-w-lg">
-            Prepare with confidence for the NCLEX-RN and NCLEX-PN with high-yield questions, detailed rationales, and structured study plans.
+          <p className="mt-5 text-sm sm:text-base lg:text-lg leading-7 text-slate-600 max-w-xl">
+            NCLEX Prep Nation helps nursing candidates prepare for NCLEX-RN and NCLEX-PN with structured study materials, practice questions, NGN-style case studies, diagnostic support, guided preparation, and exam readiness resources. We support candidates in the United States, Canada, and international nursing candidates to build clinical judgment.
           </p>
           <div className="mt-8">
             <Button
